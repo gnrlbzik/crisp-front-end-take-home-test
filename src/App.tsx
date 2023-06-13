@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DataTable from './components/DataTable';
 import ActivityIndicator from './components/ActivityIndicator';
 
+import i18n from './i18n';
 import './App.scss';
 import SALES_ORDERS_DATA from './data/sales-orders.json';
 
@@ -22,7 +23,7 @@ function App() {
       {tableData.length ? (
         <DataTable />
         ) : (
-        <ActivityIndicator labelText='Retrieving Products Data' />
+        <ActivityIndicator labelText={i18n.get('fetching_data')} />
       )}
     </div>
   );
