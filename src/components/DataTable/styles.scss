@@ -1,5 +1,11 @@
 @import "../../styles/_variables.scss";
 
+.DataTable-container {
+  background-color: $colum-base-background-color;
+  width: 100%;
+  border-spacing: 0;
+}
+
 .DataTableHeader-row {
   $right-border: 2px solid rgba($colum-border-color-dark, 0.25);
 

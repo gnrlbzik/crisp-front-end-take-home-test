@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App-container">
       {rawTableData.length ? (
-        <DataTable />
+        <DataTable rawTableData={rawTableData} />
         ) : (
         <ActivityIndicator labelText={i18n.get('fetching_data')} />
       )}
