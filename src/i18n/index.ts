@@ -1,5 +1,5 @@
 
-import type { I18nStringsDefinition, I18nLocales } from '../types';
+import type { I18nStringsDefinition, I18nLocale } from '../types';
 
 const i18nStrings: I18nStringsDefinition = {
   'en_US': {
@@ -12,7 +12,7 @@ const i18nStrings: I18nStringsDefinition = {
   },
 };
 
-export function getContentString(textId: string = 'default', locale: I18nLocales = 'en_US',) {
+export function getContentString(textId: string = 'default', locale: I18nLocale = 'en_US',) {
   const i18nString = i18nStrings[locale][textId || 'default'];
 
   return i18nString;

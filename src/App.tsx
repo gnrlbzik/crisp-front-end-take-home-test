@@ -6,10 +6,10 @@ import i18n from './i18n';
 import './App.scss';
 import SALES_ORDERS_DATA from './data/sales-orders.json';
 
-import type { ITableData } from './types';
+import type { TableData } from './types';
 
 function App() {
-  const [ tableData, setTableData ] = useState<ITableData>([]);
+  const [ tableData, setTableData ] = useState<TableData>([]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
