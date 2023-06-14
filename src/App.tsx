@@ -6,21 +6,21 @@ import i18n from './i18n';
 import './App.scss';
 import SALES_ORDERS_DATA from './data/sales-orders.json';
 
-import type { TableData } from './types';
+import type { RawTableData } from './types';
 
 function App() {
-  const [ tableData, setTableData ] = useState<TableData>([]);
+  const [ rawTableData, setRawTableData ] = useState<RawTableData>([]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTableData(SALES_ORDERS_DATA);
+      setRawTableData(SALES_ORDERS_DATA);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="App-container">
-      {tableData.length ? (
+      {rawTableData.length ? (
         <DataTable />
         ) : (
         <ActivityIndicator labelText={i18n.get('fetching_data')} />

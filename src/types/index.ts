@@ -1,5 +1,5 @@
 
-type TableDataRow = {
+type RawTableDataRow = {
   rowId: number,
   orderId: string,
   orderDate: string,
@@ -23,7 +23,7 @@ type TableDataRow = {
   profit: number,
 }
 
-export type TableData = Array<TableDataRow>
+export type RawTableData = Array<RawTableDataRow>
 
 export type I18nLocale = 'en_US' | 'es_MX'
 
@@ -39,3 +39,6 @@ export type I18nStringsDefinition = {
 
 export type HeaderColumns = Array<{columnName: string, columnGroupName: string,}>
 
+export type BuildTableDataStructureReturnValue = {
+  headerColumns: HeaderColumns,
+}
