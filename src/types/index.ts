@@ -36,3 +36,6 @@ export type I18nStringsDefinition = {
     [key: I18nLocaleStringId]: I18nLocaleStringValue
   }
 }
+
+export type HeaderColumns = Array<{columnName: string, columnGroupName: string,}>
+
