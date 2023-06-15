@@ -5,13 +5,10 @@
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 1. you will require node runtime, install one
-    > On Mac:
-    > See `.nvmrc` for node version
-    > You could use https://brew.sh/, install node via `brew install node@18`
-    > or `brew install nvm` && `nvm install v18.16.0` && `nvm use`
+    > On Mac: 
+    > See `.nvmrc` for node version. You could use https://brew.sh/, install node via `brew install node@18` or `brew install nvm` && `nvm install v18.16.0` && `nvm use`
 2. this project runs on yarn
-    > On Mac:
-    > Install it via `brew install yarn` and than
+    > On Mac: Install it via `brew install yarn`.
 3. install all the dependencies
     > run `yarn`
 4. now you can run the project
@@ -58,17 +55,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## TODO
 > List of the next steps I would want to do if this was a real project
 
-- [] As per design, I would incorporate scrolling through state data, horizontally and vertically
-- [] As per design, Once scrolling is implemented, I would incorporate sticky table header and sticky left column for category/sub-category.
-- [] Dependency import aliases, for example, when importing i18n util, not to manually traverse directory path
-- [] Replace border with shadow to separation products/states
-- [] Implement collapse/expand of group of category rows
-- [] Add responsive support to manage size and layout breakpoints for smaller/larger viewports
-- [] Expand suite of unit tests
-- [] Add suite of e2e tests
-- [] Add data mapping configuration, so you can build table out based on config.
-- [] Convert data fetching to async calls / api calls
-- [] Address FIXME: / TODO: items
+- [ ] As per design, I would incorporate scrolling through state data, horizontally and vertically
+- [ ] As per design, Once scrolling is implemented, I would incorporate sticky table header and sticky left column for category/sub-category.
+- [ ] Dependency import aliases, for example, when importing i18n util, not to manually traverse directory path
+- [ ] Replace border with shadow to separation products/states
+- [ ] Implement collapse/expand of group of category rows
+- [ ] Add responsive support to manage size and layout breakpoints for smaller/larger viewports
+- [ ] Expand suite of unit tests
+- [ ] Add suite of e2e tests
+- [ ] Add data mapping configuration, so you can build table out based on config.
+- [ ] Convert data fetching to async calls / api calls
+- [ ] Address FIXME: / TODO: items
     - #1 - /crisp-front-end-take-home-test/src/services/index.ts#35
 	FIXME: this should iterates through dataKeys instead of referencing row.state
     - #2 - /crisp-front-end-take-home-test/src/types/index.ts#42
