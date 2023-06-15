@@ -31,7 +31,7 @@ function buildTableDataHeaderRows( rawTableData: RawTableData, config: SalesOrde
 
     if (flattenKeysDataAndReplace) {
       dataKeys.length = 0;
-      dataKeys.push(...new Set(rawTableData.map((row) => row.state)));
+      dataKeys.push(...new Set(rawTableData.map((row) => row.state))); // FIXME: this should iterates through dataKeys instead of referencing row.state
     }
 
     structuredHeadersData.columnGroupsLabels[label] = dataKeys.length;
