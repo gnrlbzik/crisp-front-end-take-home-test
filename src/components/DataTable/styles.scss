@@ -1,5 +1,8 @@
 @import "../../styles/_variables.scss";
 
+$right-border: 2px solid rgba($colum-border-color-dark, 0.2);
+$right-border-lighter: 2px solid rgba($colum-border-color-dark, 0.1);
+
 .DataTable-container {
   background-color: $colum-base-background-color;
   width: 100%;
@@ -7,7 +10,6 @@
 }
 
 .DataTableHeader-row {
-  $right-border: 2px solid rgba($colum-border-color-dark, 0.25);
 
   background-color: $base-color-blue;
 
@@ -34,7 +36,7 @@
     color: $text-color-column-heading;
     font-weight: 100;
     text-align: right;
-    border-bottom: 2px solid rgba($colum-border-color-dark, 0.15);
+    border-bottom: 3px solid rgba($colum-border-color-dark, 0.75);
 
     &:nth-child(-n+2) {
       text-align: left;
@@ -44,4 +46,42 @@
       border-right: $right-border;
     }
   }
+}
+
+.DataTableBody-Row {
+
+  td {
+    &:nth-child(-n+2) {
+      text-align: left;
+    }
+
+    &:nth-child(2) {
+      border-right: $right-border-lighter;
+    }
+
+    color: $text-color-cell;
+    text-align: right;
+    padding: 0.5em 1em 0.5em 1em;
+  }
+
+  &.display-as-total-row {
+    background-color: $colum-sum-background-color;
+    
+    td {
+      color: $text-color-cell-dark;
+      font-weight: 400;
+      border-top: 1px solid $colum-border-color-grey-dark;
+      border-bottom: 1px solid $colum-border-color-grey-dark;
+    }
+  }
+}
+
+// Row spacing adjustments
+.DataTableHeader-row + .DataTableBody-Row td,
+.display-as-total-row + .DataTableBody-Row td {
+  padding-top: 1.25em;
+}
+
+.DataTableBody-Row:has(+.display-as-total-row) td {
+  padding-bottom: 1.25em;
 }

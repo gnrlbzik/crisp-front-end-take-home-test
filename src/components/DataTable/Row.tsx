@@ -1,11 +1,34 @@
 import React from 'react';
+import Cell from './Cell';
 
 import type { ReactElement } from 'react';
 
-type DataTableRowProps = {}
+import './styles.scss';
 
-export default function DataTableRow ({} : DataTableRowProps): ReactElement {
+type DataTableRowProps = {
+  isTotalRow?: boolean,
+  cellsCollection?: Array<string>,
+}
+
+export default function DataTableRow ({
+  isTotalRow = false,
+  cellsCollection = [],
+} : DataTableRowProps): ReactElement {
+
+  const cssClasses = ([
+    'DataTableBody-Row',
+    (isTotalRow ? 'display-as-total-row' : null),
+  ]).join(' ');
+
   return (
-    <>Table Row</>
+    <tr className={cssClasses}>
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+    </tr>
   );
 }
