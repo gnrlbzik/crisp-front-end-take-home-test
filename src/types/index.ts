@@ -37,8 +37,15 @@ export type I18nStringsDefinition = {
   }
 }
 
-export type HeaderColumns = Array<{columnName: string, columnGroupName: string,}>
+export type TableDataHeaderRows = {
+  columnGroupsLabels: any, // FIXME: add proper typings, bad juju
+  columns: Array<string>,
+}
+
+export type TableDataBodyRows = Array<{columnName: string, columnGroupName: string,}>
 
 export type BuildTableDataStructureReturnValue = {
-  headerColumns: HeaderColumns,
+  headerRows: TableDataHeaderRows,
+  bodyRows: TableDataBodyRows,
 }
+

@@ -1,12 +1,12 @@
 import React from 'react';
 
 import type { ReactElement } from 'react';
-import type { HeaderColumns } from '../../types';
+import type { TableDataHeaderRows } from '../../types';
 
 import './styles.scss';
 
 type DataTableHeaderProps = {
-  headerColumns: HeaderColumns,
+  rows: TableDataHeaderRows,
 }
 
 export default function DataTableHeader (props : DataTableHeaderProps): ReactElement {
