@@ -25,13 +25,13 @@ export default function DataTable (props : DataTableProps): ReactElement {
       setTableData(services.buildTableDataStructure(rawTableData));
     }, 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [ rawTableData ]);
 
   return (
-    Object.keys(tableData).length ? (
+    tableData.headerRows.columns.length ? (
       <table className="DataTable-container">
-        <Header headerColumns={tableData.headerColumns} />
-        <Body />
+        <Header rows={tableData.headerRows} />
+        <Body rows={tableData.bodyRows} />
       </table>
       ) : (
       <ActivityIndicator labelText={i18n.get('prepping_data')} />

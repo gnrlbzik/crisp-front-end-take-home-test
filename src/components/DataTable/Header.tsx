@@ -10,20 +10,20 @@ type DataTableHeaderProps = {
 }
 
 export default function DataTableHeader (props : DataTableHeaderProps): ReactElement {
+  const { rows: { columnGroupsLabels, columns } } = props;
+  const groupLabels = Object.keys(columnGroupsLabels);
+
   return (
     <>
       <tr className="DataTableHeader-row group-heading">
-        <th colSpan={2}>cat a</th>
-        <th colSpan={5}>cat b</th>
+        {groupLabels.map(
+          (label) => <th colSpan={columnGroupsLabels[label]}>{label}</th>,
+        )}
       </tr>
       <tr className="DataTableHeader-row column-heading">
-        <th>col a</th>
-        <th>col b</th>
-        <th>col c</th>
-        <th>col d</th>
-        <th>col e</th>
-        <th>col f</th>
-        <th>col g</th>
+        {columns.map(
+          (column) => <th>{column}</th>,
+        )}
       </tr>
     </>
   );

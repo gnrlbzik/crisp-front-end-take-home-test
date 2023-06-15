@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 
 type RawTableDataRow = {
   rowId: number,
@@ -49,3 +50,16 @@ export type BuildTableDataStructureReturnValue = {
   bodyRows: TableDataBodyRows,
 }
 
+export type SalesOrdersTableConfig = {
+  styling: {
+    tableRow: CSSProperties,
+    tableCell: CSSProperties,
+  },
+  tableToDataMapping: {
+    groupings: Array<{
+      label: string,
+      dataKeys: Array<string>,
+      flattenKeysDataAndReplace?: boolean,
+    }>,
+  }
+}
