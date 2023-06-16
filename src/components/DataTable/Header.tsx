@@ -14,7 +14,7 @@ export default function DataTableHeader (props : DataTableHeaderProps): ReactEle
   const groupLabels = Object.keys(columnGroupsLabels);
 
   return (
-    <>
+    <thead>
       <tr className="DataTableHeader-row group-heading">
         {groupLabels.map(
           (label) => <th colSpan={columnGroupsLabels[label]}>{label}</th>,
@@ -25,6 +25,6 @@ export default function DataTableHeader (props : DataTableHeaderProps): ReactEle
           (column) => <th>{column}</th>,
         )}
       </tr>
-    </>
+    </thead>
   );
 }

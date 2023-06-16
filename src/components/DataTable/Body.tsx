@@ -9,13 +9,13 @@ type DataTableBodyProps = {}
 
 export default function DataTableBody ({} : DataTableBodyProps): ReactElement {
   return (
-    <>
+    <tbody>
       <Row />
       <Row />
       <Row />
       <Row isTotalRow />
       <Row />
       <Row />
-    </>
+    </tbody>
   );
 }
