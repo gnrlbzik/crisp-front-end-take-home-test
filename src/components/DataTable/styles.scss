@@ -3,6 +3,10 @@
 $right-border: 2px solid rgba($colum-border-color-dark, 0.2);
 $right-border-lighter: 2px solid rgba($colum-border-color-dark, 0.1);
 
+.DataTable-overflow-container {
+  overflow: auto;
+}
+
 .DataTable-container {
   background-color: $colum-base-background-color;
   width: 100%;

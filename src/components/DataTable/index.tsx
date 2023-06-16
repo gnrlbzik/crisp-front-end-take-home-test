@@ -29,10 +29,12 @@ export default function DataTable (props : DataTableProps): ReactElement {
 
   return (
     tableData.headerRows.columns.length ? (
-      <table className="DataTable-container">
-        <Header rows={tableData.headerRows} />
-        <Body rows={tableData.bodyRows} />
-      </table>
+      <div className='DataTable-overflow-container'>
+        <table className='DataTable-container'>
+          <Header rows={tableData.headerRows} />
+          <Body rows={tableData.bodyRows} />
+        </table>
+      </div>
       ) : (
       <ActivityIndicator labelText={i18n.get('prepping_data')} />
     )    
