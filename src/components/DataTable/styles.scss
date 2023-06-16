@@ -22,14 +22,10 @@ $right-border-lighter: 2px solid rgba($colum-border-color-dark, 0.1);
     color: $text-color-group-heading;
     text-transform: uppercase;
     font-weight: 400;
+    text-align: left;
 
     &:first-child {
       border-right: $right-border;
-      text-align: left;
-    }
-
-    &:last-child {
-      text-align: center;
     }
   }
 

@@ -1,7 +1,11 @@
 @import "../../styles/_variables.scss";
 
 .ActivityIndicator-container {
-  .activity-indicator-label {}
+  text-align: center;
+
+  .activity-indicator-label {
+    text-transform: uppercase;
+  }
 
   .activity-progress-indicator {
     display: inline-block;
