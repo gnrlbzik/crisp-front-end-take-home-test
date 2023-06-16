@@ -45,6 +45,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## List of assumptions / simplifications
 
 - i did not add scrolling at this time to states columns data
+- did not center states group label
 - no column resizing by user mouse manipulation
 - no collapse/expand of group of category rows
 - simplified shadows that appear on screenshot to be dark borders

@@ -75,6 +75,10 @@ $right-border-lighter: 2px solid rgba($colum-border-color-dark, 0.1);
       border-bottom: 1px solid $colum-border-color-grey-dark;
     }
   }
+
+  &.no-data-to-display {
+    padding: 1.5em 1em;
+  }
 }
 
 // Row spacing adjustments

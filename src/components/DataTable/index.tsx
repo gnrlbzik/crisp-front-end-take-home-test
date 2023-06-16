@@ -32,7 +32,10 @@ export default function DataTable (props : DataTableProps): ReactElement {
       <div className='DataTable-overflow-container'>
         <table className='DataTable-container'>
           <Header rows={tableData.headerRows} />
-          <Body rows={tableData.bodyRows} />
+          <Body 
+            rows={tableData.bodyRows}
+            numberOfColumnsForEmptyMessage={tableData.headerRows.columns.length}
+          />
         </table>
       </div>
       ) : (
