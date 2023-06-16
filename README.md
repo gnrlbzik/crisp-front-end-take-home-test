@@ -66,9 +66,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [ ] Add data mapping configuration, so you can build table out based on config.
 - [ ] Convert data fetching to async calls / api calls
 - [ ] Address FIXME: / TODO: items
-    - #1 - /crisp-front-end-take-home-test/src/services/index.ts#35
-	FIXME: this should iterates through dataKeys instead of referencing row.state
-    - #2 - /crisp-front-end-take-home-test/src/types/index.ts#42
-	FIXME: add proper typings, bad juju
+  - #1 - /crisp-front-end-take-home-test/src/services/index.ts#40
+    > FIXME: casted row as any to temporary fix ts(7053)
+  - #2 - /crisp-front-end-take-home-test/src/types/index.ts#44
+    > FIXME: add proper typings, bad juju
 
 

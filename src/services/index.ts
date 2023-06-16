@@ -4,6 +4,7 @@ import i18n from '../i18n';
 import type {
   BuildTableDataStructureReturnValue,
   RawTableData,
+  RawTableDataRow,
   TableDataHeaderRows,
   SalesOrdersTableConfig,
 } from '../types';
@@ -30,8 +31,17 @@ function buildTableDataHeaderRows( rawTableData: RawTableData, config: SalesOrde
     const { dataKeys, label, flattenKeysDataAndReplace} = group;
 
     if (flattenKeysDataAndReplace) {
+      const dataKeysCopyToIterate: Array<string> = [...dataKeys];
+
       dataKeys.length = 0;
-      dataKeys.push(...new Set(rawTableData.map((row) => row.state))); // FIXME: this should iterates through dataKeys instead of referencing row.state
+      dataKeysCopyToIterate.forEach((key: string) => {
+        const matchedKeyDataToFlatten = rawTableData.map((row: RawTableDataRow) => {
+          // FIXME: casted row as any to temporary fix ts(7053)
+          return (row as any)[key];
+        });
+        
+        dataKeys.push(...new Set(matchedKeyDataToFlatten));
+      });
     }
 
     structuredHeadersData.columnGroupsLabels[label] = dataKeys.length;
