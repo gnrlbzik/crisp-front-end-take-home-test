@@ -17,12 +17,12 @@ export default function DataTableHeader (props : DataTableHeaderProps): ReactEle
     <thead>
       <tr className="DataTableHeader-row group-heading">
         {groupLabels.map(
-          (label) => <th colSpan={columnGroupsLabels[label]}>{label}</th>,
+          (label, index) => <th colSpan={columnGroupsLabels[label]} key={`${index}-${label}`}>{label}</th>,
         )}
       </tr>
       <tr className="DataTableHeader-row column-heading">
         {columns.map(
-          (column) => <th>{column}</th>,
+          (column, index) => <th key={`${index}-${column}`}>{column}</th>,
         )}
       </tr>
     </thead>
