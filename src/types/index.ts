@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 
-type RawTableDataRow = {
+export type RawTableDataRow = {
   rowId: number,
   orderId: string,
   orderDate: string,
