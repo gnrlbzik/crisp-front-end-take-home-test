@@ -58,8 +58,8 @@ export type SalesOrdersTableConfig = {
   tableToDataMapping: {
     groupings: Array<{
       label: string,
-      dataKeys: Array<string>,
-      flattenKeysDataAndReplace?: boolean,
+      columnDataKeys: Array<string>,
+      flattenColumnKeysDataAndReplace?: boolean,
     }>,
   }
 }

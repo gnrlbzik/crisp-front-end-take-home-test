@@ -28,24 +28,24 @@ function buildTableDataHeaderRows( rawTableData: RawTableData, config: SalesOrde
   };
 
   groupings.forEach((group) => {
-    const { dataKeys, label, flattenKeysDataAndReplace} = group;
+    const { columnDataKeys, label, flattenColumnKeysDataAndReplace} = group;
 
-    if (flattenKeysDataAndReplace) {
-      const dataKeysCopyToIterate: Array<string> = [...dataKeys];
+    if (flattenColumnKeysDataAndReplace) {
+      const columnDataKeysCopyToIterate: Array<string> = [...columnDataKeys];
 
-      dataKeys.length = 0;
-      dataKeysCopyToIterate.forEach((key: string) => {
+      columnDataKeys.length = 0;
+      columnDataKeysCopyToIterate.forEach((key: string) => {
         const matchedKeyDataToFlatten = rawTableData.map((row: RawTableDataRow) => {
           // FIXME: casted row as any to temporary fix ts(7053)
           return (row as any)[key];
         });
         
-        dataKeys.push(...new Set(matchedKeyDataToFlatten));
+        columnDataKeys.push(...new Set(matchedKeyDataToFlatten));
       });
     }
 
-    structuredHeadersData.columnGroupsLabels[label] = dataKeys.length;
-    structuredHeadersData.columns.push(...dataKeys.map((key) => i18n.get(key)));
+    structuredHeadersData.columnGroupsLabels[label] = columnDataKeys.length;
+    structuredHeadersData.columns.push(...columnDataKeys.map((key) => i18n.get(key)));
   });
 
   return structuredHeadersData;

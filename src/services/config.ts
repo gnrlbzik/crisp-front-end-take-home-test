@@ -11,15 +11,15 @@ export const salesOrdersTableConfig:SalesOrdersTableConfig = {
     groupings: [
       {
         label: 'Products',
-        dataKeys: [
+        columnDataKeys: [
           'category',
           'subCategory',
         ],
       },
       {
         label: 'States',
-        dataKeys: ['state'],
-        flattenKeysDataAndReplace: true,
+        columnDataKeys: ['state'],
+        flattenColumnKeysDataAndReplace: true,
       },
     ],
   },
